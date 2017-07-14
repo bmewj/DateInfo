@@ -43,7 +43,7 @@ DateInfo.year(2017) === {
 const DateInfo = require('date-info')
 
 DateInfo.year(2017).month(2) === {
-    month: 2,
+    month: 2, // February
     date: { year: 2017, month: 2 },
     numberOfDays: 28,
     week: (week) => /* week info */,
