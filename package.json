@@ -1,0 +1,31 @@
+{
+  "name": "date-info",
+  "version": "1.0.0",
+  "description": "Node module that helps with the Gregorian calendar. Especially good for week numbering.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartjoyce/DateInfo.git"
+  },
+  "keywords": [
+    "date",
+    "info",
+    "information",
+    "dates",
+    "calendar",
+    "week",
+    "number",
+    "month",
+    "year",
+    "timestamp"
+  ],
+  "author": "Bartholomew Joyce <bartholomew.michael.joyce@gmail.com> (https://github.com/bartjoyce/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bartjoyce/DateInfo/issues"
+  },
+  "homepage": "https://github.com/bartjoyce/DateInfo#readme"
+}
