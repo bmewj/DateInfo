@@ -8,7 +8,14 @@
 
 const getYearInfo = require('./getYearInfo')
 
+let memoized = {}
+
 function getYearWeekArray(year) {
+
+  if (memoized[year]) {
+    return memoized[year]
+  }
+
   const { startWeek, firstDay, weekCount, dayCount } = getYearInfo(year)
 
   let out = []
@@ -35,6 +42,7 @@ function getYearWeekArray(year) {
     ])
   }
 
+  memoized[year] = out
   return out
 }
 

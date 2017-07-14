@@ -12,7 +12,13 @@ const mod = (a, b) => ((a%b)+b)%b
 const FIRST_DAYS = '6123467124567234571235671345'
 const MONTH_CODES = 'acababaababa'
 
+let memoized = {}
+
 function getYearInfo(year) {
+
+  if (memoized[year]) {
+    return memoized[year]
+  }
 
   const m4 = mod(year, 4);
   const m28 = mod(year - 12, 28);
@@ -36,6 +42,7 @@ function getYearInfo(year) {
     }
   }
 
+  memoized[year] = data
   return data
 
 }

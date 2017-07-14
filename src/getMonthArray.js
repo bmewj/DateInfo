@@ -8,11 +8,14 @@
 
 const getWeekArray = require('./getWeekArray')
 
+const MONTH_CODES = 'acababaababa'
 const months = [1,2,3,4,5,6,7,8,9,10,11,12]
 
 function getMonthArray(parentYear) {
 
   return months.map(n => {
+
+    const code = MONTH_CODES[n - 1]
 
     let monthData = {
       month: n,
@@ -20,6 +23,7 @@ function getMonthArray(parentYear) {
         year: parentYear.year,
         month: n
       },
+      numberOfDays: (code === 'a') ? 31 : ((code === 'b') ? 30 : (parentYear.isLeapYear ? 29 : 28)),
       weeks: null,
       week: week => {
         for (let i = monthData.weeks.length - 1; i >= 0; i--) {
