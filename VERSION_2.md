@@ -147,4 +147,11 @@ wk6tue.week === 6
 wk6tue.day === 7     // 7th
 wk6tue.weekDay === 2 // Tuesday
 
+wk6tue.jumpDays(4)    === DateInfo.day(2017, 2, 7 + 4)
+wk6tue.jumpDays(-6)   === DateInfo.day(2017, 2, 7 - 6)
+wk6tue.jumpWeeks(2)   === DateInfo.day(2017, 2, 7 + 2*7)
+wk6tue.jumpMonths(3)  === DateInfo.day(2017, 2 + 3, 7)
+wk6tue.jumpMonths(-2) === DateInfo.day(2016, 12, 7)
+wk6tue.jumpYears(2)   === DateInfo.day(2019, 2, 7)
+
 ```
