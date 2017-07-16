@@ -7,7 +7,7 @@ Not implemented yet. This is the plan for the new version.
 const yr2017 = DateInfo.year(2017)
 const august = DateInfo.month(2017, 8)
 const week31 = DateInfo.week(2017, 31)
-const may1st = DateInfo.day(2017, 5, 1)
+const may1st = DateInfo.date(2017, 5, 1)
 const day200 = DateInfo.day(2017, 200)      // 200th day of 2017
 const wk6tue = DateInfo.weekDay(2017, 6, 2) // Tuesday, week 6
 
@@ -91,11 +91,11 @@ august.weeks.get(i) === august.weeks.toArray()[i]
 august.weeks.length === 5
 
 august.days.toArray() === [
-  DateInfo.day(2017, 8, 1),
-  DateInfo.day(2017, 8, 2),
+  DateInfo.date(2017, 8, 1),
+  DateInfo.date(2017, 8, 2),
   ...
-  DateInfo.day(2017, 8, 30),
-  DateInfo.day(2017, 8, 31)
+  DateInfo.date(2017, 8, 30),
+  DateInfo.date(2017, 8, 31)
 ]
 august.days.map(day => ...)
 august.days.forEach(day => ...)
@@ -120,13 +120,13 @@ w31aug.week === 31
 w31aug.month === 8 // <-- notice the month change
 
 week31.days.toArray() === [
-  DateInfo.day(2017, 7, 31),
-  DateInfo.day(2017, 8, 1),
-  DateInfo.day(2017, 8, 2),
-  DateInfo.day(2017, 8, 3),
-  DateInfo.day(2017, 8, 4),
-  DateInfo.day(2017, 8, 5),
-  DateInfo.day(2017, 8, 6)
+  DateInfo.date(2017, 7, 31),
+  DateInfo.date(2017, 8, 1),
+  DateInfo.date(2017, 8, 2),
+  DateInfo.date(2017, 8, 3),
+  DateInfo.date(2017, 8, 4),
+  DateInfo.date(2017, 8, 5),
+  DateInfo.date(2017, 8, 6)
 ]
 week31.days.map(day => ...)
 week31.days.forEach(day => ...)
@@ -144,14 +144,15 @@ const wk6tue = DateInfo.weekDay(2017, 6, 2) // Tuesday, week 6
 wk6tue.year === 2017
 wk6tue.month === 2   // February
 wk6tue.week === 6
-wk6tue.day === 7     // 7th
+wk6tue.date === 7    // 7th
 wk6tue.weekDay === 2 // Tuesday
+wk6tue.day === 38    // 38th day of 2017
 
-wk6tue.jumpDays(4)    === DateInfo.day(2017, 2, 7 + 4)
-wk6tue.jumpDays(-6)   === DateInfo.day(2017, 2, 7 - 6)
-wk6tue.jumpWeeks(2)   === DateInfo.day(2017, 2, 7 + 2*7)
-wk6tue.jumpMonths(3)  === DateInfo.day(2017, 2 + 3, 7)
-wk6tue.jumpMonths(-2) === DateInfo.day(2016, 12, 7)
-wk6tue.jumpYears(2)   === DateInfo.day(2019, 2, 7)
+wk6tue.jumpDays(4)    === DateInfo.date(2017, 2, 7 + 4)
+wk6tue.jumpDays(-6)   === DateInfo.date(2017, 2, 7 - 6)
+wk6tue.jumpWeeks(2)   === DateInfo.date(2017, 2, 7 + 2*7)
+wk6tue.jumpMonths(3)  === DateInfo.date(2017, 2 + 3, 7)
+wk6tue.jumpMonths(-2) === DateInfo.date(2016, 12, 7)
+wk6tue.jumpYears(2)   === DateInfo.date(2019, 2, 7)
 
 ```
