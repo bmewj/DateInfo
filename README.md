@@ -6,9 +6,7 @@
 npm install date-info
 ```
 
-## Example Usage
-
-### 1. Iterate over all weeks in a year
+## Example: Iterate over all weeks
 
 ```javascript
 
@@ -40,7 +38,7 @@ Week 51: 18/12 to 24/12
 Week 52: 25/12 to 31/12
 ```
 
-### 2. Iterate over all weeks in each month
+## Example: Iterate over all weeks in every month
 
 ```javascript
 
@@ -90,7 +88,7 @@ Week 17: 24/4 to 30/4
 ...
 ```
 
-### 3. Get information regarding a specific date
+## Example: Specific date information
 
 ```javascript
 
@@ -118,7 +116,7 @@ Week:  35
 Day of week: 4 <-- Thursday
 ```
 
-### 4. Jump forwards and backwards in time
+## Example: Jump forwards and backwards in time
 
 ```javascript
 
@@ -315,5 +313,38 @@ wk6tue.jumpWeeks(2)   === DateInfo.date(2017, 2, 7 + 2*7)
 wk6tue.jumpMonths(3)  === DateInfo.date(2017, 2 + 3, 7)
 wk6tue.jumpMonths(-2) === DateInfo.date(2016, 12, 7)
 wk6tue.jumpYears(2)   === DateInfo.date(2019, 2, 7)
+
+```
+
+## Appendix: month numbering, week day numbering
+
+Months are counted from 1 = January to 12 = December. Week days are
+counted from 1 = Monday to 7 = Sunday. You can also use the constants
+included in the package:
+
+```javascript
+
+const DateInfo = require('date-info')
+
+DateInfo.MON === 1
+DateInfo.TUE === 2
+DateInfo.WED === 3
+DateInfo.THU === 4
+DateInfo.FRI === 5
+DateInfo.SAT === 6
+DateInfo.SUN === 7
+
+DateInfo.JAN === 1
+DateInfo.FEB === 2
+DateInfo.MAR === 3
+DateInfo.APR === 4
+DateInfo.MAY === 5
+DateInfo.JUN === 6
+DateInfo.JUL === 7
+DateInfo.AUG === 8
+DateInfo.SEP === 9
+DateInfo.OCT === 10
+DateInfo.NOV === 11
+DateInfo.DEC === 12
 
 ```
