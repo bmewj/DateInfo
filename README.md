@@ -10,6 +10,8 @@ npm install date-info
 
 ```javascript
 
+const DateInfo = require('date-info')
+
 DateInfo.year(2017).weeks.forEach(week => {
   const begin = week.days.get(0)
   const end   = week.days.get(week.days.length - 1)
