@@ -41,7 +41,7 @@ const DateInfo = {
     return weekInfo.days.get(weekDay - weekInfo.days.get(0).weekDay)
   },
 
-  fromId: id => day(id),
+  fromId: id => dayFn(id),
 
   MON: 1,
   TUE: 2,
